@@ -27,6 +27,8 @@ import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-confi
 import { environment } from '../environments/environment.development';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { provideToastr } from 'ngx-toastr';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -51,7 +53,8 @@ export const appConfig: ApplicationConfig = {
       provideMessaging(() => getMessaging()),
       providePerformance(() => getPerformance()),
       provideStorage(() => getStorage()),
-      provideRemoteConfig(() => getRemoteConfig())
+      provideRemoteConfig(() => getRemoteConfig()),
+      NgxSpinnerModule.forRoot({ type: 'ball-spin-clockwise-fade' })
     ]),
     ScreenTrackingService,
     UserTrackingService,
@@ -62,6 +65,13 @@ export const appConfig: ApplicationConfig = {
       autoPause: true, // Pauses recording actions and state changes when the extension window is not open
       trace: false, //  If set to true, will include stack trace for every dispatched action, so you can see it in trace tab jumping directly to that part of code
       traceLimit: 75 // maximum stack trace frames to be stored (in case trace option was provided as true)
+    }),
+    provideToastr({
+      timeOut: 10000, // 10 seconds
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      closeButton: true,
+      progressBar: true
     })
   ]
 };
