@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "xtra-blogger": {
+      "hosting": {
+        "xtra-blog": [
+          "xtra-blogger"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "xtra-blogger"
+  }
+}
