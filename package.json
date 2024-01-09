@@ -1,6 +1,21 @@
 {
   "name": "xtra-blog",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Xtra Blog - Client, with Firebase, Tailwindcss and NgRX.",
+  "author": "Kelvince Phillips <themikrochip1@gmail.com> (https://github.com/Kelvince01)",
+  "homepage": "https://Kelvince01.github.io/xtra-blog/",
+  "keywords": [
+    "angular",
+    "blog",
+    "xtra"
+  ],
+  "bugs": {
+    "url": "https://github.com/Kelvince01/xtra-blog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kelvince01/xtra-blog"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -23,6 +38,7 @@
     "@angular/common": "^17.0.0",
     "@angular/compiler": "^17.0.0",
     "@angular/core": "^17.0.0",
+    "@angular/fire": "^17.0.0",
     "@angular/forms": "^17.0.0",
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
@@ -52,6 +68,7 @@
     "@types/node": "^18.18.0",
     "@typescript-eslint/eslint-plugin": "6.18.0",
     "@typescript-eslint/parser": "6.18.0",
+    "cypress": "latest",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^8.0.3",
@@ -63,8 +80,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "lint-staged": "^15.2.0",
     "prettier": "3.1.1",
-    "typescript": "~5.2.2",
-    "cypress": "latest"
+    "typescript": "~5.2.2"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",

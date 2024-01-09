@@ -1,0 +1,11 @@
+{
+  "hosting": [
+    {
+      "target": "xtra-blog",
+      "source": ".",
+      "frameworksBackend": {
+        "region": "us-east1"
+      }
+    }
+  ]
+}
